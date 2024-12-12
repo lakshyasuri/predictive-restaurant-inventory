@@ -47,7 +47,15 @@ pip install -r requirements.txt
 ```bash
 pip3 install -r requirements.txt
 ```
-### Step 4: Run the Flask Application
+### Step 4: Adding models and historical data
+1. **add machine learning models**
+   - Go to https://drive.google.com/drive/folders/1L-UlaPMUdI_u0AEjKQIcE9TReMveopUS and download all the '.pkl' files. These are the trained models.
+   - Place the '.pkl' files into the app/models/ directory of this project.
+2. **add the historical dataset**
+   - Go to https://drive.google.com/drive/folders/1L-UlaPMUdI_u0AEjKQIcE9TReMveopUS and download the 'historical_data.csv' file.
+   - Place the file in the home directory of your system. For example - /Users/lakshya in MacOS, C:\Users\lakshya in Windows, and /home/lakshya in Linux.
+
+### Step 5: Run the Flask Application
 
 Run the Flask app with:
 
@@ -79,43 +87,6 @@ Visit `http://127.0.0.1:5000/` in your browser to see the app.
 3. **Start XAMPP**  
    - Launch the XAMPP Control Panel.  
    - Start the **Apache** and **MySQL** modules.
-
----
-
-## Database Setup  
-
-Follow these steps to create the database and configure the user for this project:  
-
-1. **Access phpMyAdmin**  
-   - Open your browser and navigate to `http://localhost/phpmyadmin`.  
-   - Log in with the default credentials (usually `root` with no password).  
-
-2. **Create a Database**  
-   - Click on the **Databases** tab at the top.  
-   - In the "Create database" section:  
-     - Enter `prims` as the database name.  
-     - Choose the collation `utf8mb4_general_ci` (recommended for compatibility).  
-     - Click **Create**.  
-
-3. **Create a User**  
-   - Navigate to the **User accounts** tab in phpMyAdmin.  
-   - Click **Add user account**.  
-   - Fill in the details:  
-     - **Username**: `admin`  
-     - **Host name**: enter `localhost`.  
-     - **Password**: `admin`  
-     - **Re-type Password**: `admin`  
-
-4. **Grant Privileges**  
-   - Under the "Database for user" section:  
-     - Select **Grant all privileges on database 'prims'**.  
-   - Alternatively, scroll down to the "Global privileges" section and click **Check all**.  
-
-5. **Apply Changes**  
-   - Click **Go** to save the user and their privileges.  
-
-6. **Verify Configuration**  
-   - Return to the **User accounts** tab to confirm that the `admin` user has been created and assigned to the `prims` database.  
 
 ---
 
